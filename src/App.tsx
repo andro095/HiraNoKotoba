@@ -1,9 +1,11 @@
+import { Button } from "primereact/button"
 
 function App() {
 
   return (
     <>
-      <h1>Title</h1>
+      <Button label="Click" />
+      <p>Esto es mi texto de pruebas</p>
     </>
   )
 }

@@ -14,7 +14,7 @@ import { store } from '@store'
 import { AppWrapper } from './AppWrapper.tsx'
 
 // Local Styles
-import './index.css'
+import './index.scss'
 
         
 

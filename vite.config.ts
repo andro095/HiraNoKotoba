@@ -2,8 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
+const navigator = '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge'
+
+const browser = process.env.BROWSER = navigator
+
 // https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [react()],
   resolve: {
     alias: {
       '@assets': path.resolve(__dirname, './src/assets'),
@@ -20,5 +25,7 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
     }
   },
-  plugins: [react()],
+  server: {
+    open: browser,
+  }
 })

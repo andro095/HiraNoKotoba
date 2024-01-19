@@ -10,10 +10,22 @@ import { locales } from "@locales";
 
 // Local Components
 import App from "./App"
+import { APIOptions, PrimeReactProvider } from "primereact/api";
+import { useMemo } from "react";
+
+// Styles
+import  'primeflex/primeflex.css';
+import 'primeicons/primeicons.css';        
+import '@styles/index.scss';
+import './index.scss';
 
 
 export const AppWrapper = () => {
     const { locale } = useConfigStore();
+
+    const primeContextOptions : Partial<APIOptions> = useMemo(() => ({
+        locale
+    }), [locale])
 
     return (
         <IntlProvider
@@ -21,7 +33,11 @@ export const AppWrapper = () => {
             locale={locale}
             messages={flatten(locales[locale])}
         >
-            <App />
+            <PrimeReactProvider
+                value={primeContextOptions}
+            >
+                <App />
+            </PrimeReactProvider>
         </IntlProvider>
     )
 }

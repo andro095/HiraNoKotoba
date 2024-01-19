@@ -1,8 +1,15 @@
+// React Libraries
+import { useEffect } from 'react';
+
+// Third Party Libraries
+import { locale as changeLocale } from "primereact/api";
+
 // Local Libraries
 import { setLocale } from '@store';
+import { getUserLocale } from '@helpers';
+
+// Hooks
 import { useAppDispatch, useAppSelector } from './useStore'
-import { useEffect } from 'react';
-import { locales } from '@locales';
 
 
 export const useConfigStore = () => {
@@ -11,21 +18,14 @@ export const useConfigStore = () => {
     
     const updateLocale = (locale: string, updateLocalStorage: boolean = true) => {
         dispatch(setLocale(locale));
+        changeLocale(locale);
         updateLocalStorage && localStorage.setItem('locale', locale);
     };
     
     useEffect(() => {
-        const locale = localStorage.getItem('locale');
+        const locale = getUserLocale();
 
-        if (locale) {
-            updateLocale(locale, false);
-        } else {
-            const userLocale = navigator.language.split('-')[0];
-
-            const finalLocale = userLocale in locales ? userLocale : 'en';
-
-            updateLocale(finalLocale);
-        }
+        dispatch(setLocale(locale));
     }, []);
     
     return {
