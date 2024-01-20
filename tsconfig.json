@@ -28,6 +28,7 @@
       "@constants": ["src/constants"],
       "@helpers": ["src/helpers"],
       "@hooks": ["src/hooks"],
+      "@layout": ["src/layout"],
       "@locales": ["src/locales"],
       "@models": ["src/models"],
       "@pages": ["src/pages"],

@@ -1,17 +1,17 @@
 // React Libraries
+import { useMemo } from "react";
 import { IntlProvider } from "react-intl";
 
 // Third Party Libraries
 import { flatten } from "flat";
+import { APIOptions, PrimeReactProvider } from "primereact/api";
 
 // Local Libraries
 import { useConfigStore } from "@hooks";
 import { locales } from "@locales";
 
 // Local Components
-import App from "./App"
-import { APIOptions, PrimeReactProvider } from "primereact/api";
-import { useMemo } from "react";
+import { App } from "./App";
 
 // Styles
 import  'primeflex/primeflex.css';

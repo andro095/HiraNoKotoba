@@ -1,13 +1,15 @@
-import { Button } from "primereact/button"
+import { useAuthStore } from "@hooks";
+import { RouterProvider } from "react-router-dom";
+import { LoginState } from "@models";
+import { vocRouter, authRouter } from "@routes";
 
-function App() {
+export const App = () => {
 
-  return (
-    <>
-      <Button label="Click" />
-      <p>Esto es mi texto de pruebas</p>
-    </>
-  )
+    const { authState } = useAuthStore();
+
+    const currentRouter = authState === LoginState.Authenticated ? vocRouter : authRouter;
+
+    return (
+        <RouterProvider router={currentRouter} />
+    )
 }
-
-export default App

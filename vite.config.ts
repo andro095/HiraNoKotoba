@@ -16,6 +16,7 @@ export default defineConfig({
       '@constants': path.resolve(__dirname, './src/constants'),
       '@helpers': path.resolve(__dirname, './src/helpers'),
       '@hooks': path.resolve(__dirname, './src/hooks'),
+      '@layout': path.resolve(__dirname, './src/layout'),
       '@locales': path.resolve(__dirname, './src/locales'),
       '@models': path.resolve(__dirname, './src/models'),
       '@pages': path.resolve(__dirname, './src/pages'),
