@@ -20,6 +20,7 @@ export default defineConfig({
       '@locales': path.resolve(__dirname, './src/locales'),
       '@models': path.resolve(__dirname, './src/models'),
       '@pages': path.resolve(__dirname, './src/pages'),
+      '@providers': path.resolve(__dirname, './src/providers'),
       '@routes': path.resolve(__dirname, './src/routes'),
       '@services': path.resolve(__dirname, './src/services'),
       '@store': path.resolve(__dirname, './src/store'),

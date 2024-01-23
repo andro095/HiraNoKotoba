@@ -1,11 +1,11 @@
 
 
-export interface LoginForm {
+export interface ILoginForm {
     email: string;
     password: string;
 }
 
-export interface RegisterForm {
+export interface IRegisterForm {
     email: string;
     password: string;
     confirmPassword: string;
@@ -13,6 +13,6 @@ export interface RegisterForm {
     lastName: string;
 }
 
-export interface ResetPasswordForm {
+export interface IResetPasswordForm {
     email: string;
 }
