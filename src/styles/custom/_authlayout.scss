@@ -1,9 +1,18 @@
-
+@import 'primeflex/primeflex.scss';
 
 .auth-layout {
     background-image: url('/images/loginBg.jpeg');
 
-    &-bg {
-        background-color: rgba(255, 255, 255, 0.5);        
+    &-form-wrapper {
+        width: 30%;
+        min-width: 500px;
+        @include styleclass('h-full bg-primary border-round-left-3xl shadow-4 flex flex-column align-items-center');
+        
+        img {
+            width: 200px;
+            height: 205px;
+
+            @include styleclass('my-6')
+        }
     }
 }

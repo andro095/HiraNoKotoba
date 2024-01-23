@@ -1,0 +1,9 @@
+@use '../mytheme/variables' as *;
+
+.title-font {
+    font-family: $fontTitleFamily;
+}
+
+.subtitle-font {
+    font-family: $fontSubtitleFamily;
+}

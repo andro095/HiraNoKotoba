@@ -1,3 +1,16 @@
 {
-    
+    "auth": {
+        "login": {
+            "title": "Bienvenido"
+        },
+        "register": {
+            "title": "Unete"
+        },
+        "confirmation": {
+            "title": "Confirma tu cuenta"
+        },
+        "reset": {
+            "title": "Restablece tu contraseña"
+        }
+    }
 }

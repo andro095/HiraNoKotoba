@@ -23,7 +23,7 @@
     /* Alias */
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["src/assets/*"],
+      "@assets": ["src/assets"],
       "@components": ["src/components"],
       "@constants": ["src/constants"],
       "@helpers": ["src/helpers"],
