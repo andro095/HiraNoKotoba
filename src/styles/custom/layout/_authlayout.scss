@@ -1,0 +1,60 @@
+@use '../breakpoints' as *;
+@use '../../mytheme/variables' as *;
+@import 'primeflex/primeflex.scss';
+
+.auth-layout {
+    @include sm {
+        background-image: url('/images/loginBg.jpeg');
+    }
+
+
+    &-form-wrapper {
+        width: 100%;
+        
+        @include styleclass('h-full bg-primary sm:border-round-left-3xl sm:shadow-4 flex flex-column align-items-center');
+        
+        @include sm {
+            width: 30%;
+            min-width: 500px;
+        }
+
+        .login-logo {
+            width: 200px;
+            height: 205px;
+
+            @include styleclass('my-6')
+        }
+    }
+
+    .p-float-label {
+        input:focus ~ label,
+        .p-filled ~ label,
+        .p-inputwrapper-focus ~ label,
+        .p-inputwrapper-filled ~ label {
+            color: white !important;
+    
+            @include sm {
+                font-size: 14px !important;
+            }
+    
+            @include lg {
+                font-size: 16px !important;
+            }
+        }
+    }
+
+    .p-inputswitch.p-inputswitch-checked {
+        .p-inputswitch-slider {
+            background-color: #f8f9fa;
+
+            &::before {
+                background-color: $primaryColor;
+            }
+        }
+    }
+    
+    .p-error {
+        color: white;
+    }
+}
+

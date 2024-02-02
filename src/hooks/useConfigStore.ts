@@ -16,10 +16,10 @@ export const useConfigStore = () => {
     const { locale } = useAppSelector(state => state.config);
     const dispatch = useAppDispatch();
     
-    const updateLocale = (locale: string, updateLocalStorage: boolean = true) => {
+    const updateLocale = (locale: string) => {
         dispatch(setLocale(locale));
         changeLocale(locale);
-        updateLocalStorage && localStorage.setItem('locale', locale);
+        localStorage.setItem('locale', locale);
     };
     
     useEffect(() => {

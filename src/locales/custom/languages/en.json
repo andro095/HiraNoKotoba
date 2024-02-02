@@ -1,10 +1,48 @@
 {
     "auth": {
         "login": {
-            "title": "Welcome"
+            "title": "Welcome",
+            "email": {
+                "label": "Email",
+                "required": "Email is required",
+                "invalid": "Email is invalid"
+            },
+            "password": {
+                "label": "Password",
+                "required": "Password is required"
+            },
+            "remember": "Remember me",
+            "submit": "Login",
+            "forgot": "Forgot your password?",
+            "other": "or login with",
+            "register": "Don't have an account?"
         },
         "register": {
-            "title": "Join us"
+            "title": "Join us",
+            "email": {
+                "label": "Email",
+                "required": "Email is required",
+                "invalid": "Email is invalid"
+            },
+            "password": {
+                "label": "Password",
+                "required": "Password is required"
+            },
+            "confirmPassword": {
+                "label": "Confirm password",
+                "required": "Confirm your password is required",
+                "invalid": "Passwords do not match"
+            },
+            "name": {
+                "label": "Name",
+                "required": "Name is required"
+            },
+            "lastName": {
+                "label": "Last name",
+                "required": "Last name is required"
+            },
+            "submit": "Register",
+            "login": "Already have an account?"
         },
         "confirmation": {
             "title": "Confirm your email"

@@ -1,10 +1,49 @@
 {
     "auth": {
         "login": {
-            "title": "Bienvenido"
+            "title": "Bienvenido",
+            "email": {
+                "label": "Correo",
+                "required": "Ingresa tu correo",
+                "invalid": "Correo inválido"
+            },
+            "password": {
+                "label": "Contraseña",
+                "required": "Ingresa tu contraseña"
+            },
+            "remember": "Recuérdame",
+            "submit": "Iniciar sesión",
+            "forgot": "¿Olvidaste tu contraseña?",
+            "other": "o inicia sesión con",
+            "register": "¿No tienes cuenta?"
         },
         "register": {
-            "title": "Unete"
+            "title": "Unete",
+            "email": {
+                "label": "Correo",
+                "required": "Ingresa tu correo",
+                "invalid": "Correo inválido"
+            },
+            "password": {
+                "label": "Contraseña",
+                "required": "Ingresa tu contraseña"
+            },
+            "confirmPasword": {
+                "label": "Confirma tu contraseña",
+                "required": "Confirma tu contraseña",
+                "invalid": "Las contraseñas no coinciden"
+            },
+            "name": {
+                "label": "Nombre",
+                "required": "Ingresa tu nombre"
+            },
+            "lastName": {
+                "label": "Apellido",
+                "required": "Ingresa tu apellido"
+            },
+            "submit": "Registrarse",
+            "login": "¿Ya tienes cuenta?"
+            
         },
         "confirmation": {
             "title": "Confirma tu cuenta"
