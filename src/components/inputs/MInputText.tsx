@@ -4,6 +4,7 @@ import { MInputBase } from "./MInputBase";
 import { InputText } from "primereact/inputtext";
 import { classNames } from "primereact/utils";
 import { useBreakpoints } from "@hooks";
+import { KeyFilterType } from "primereact/keyfilter";
 
 
 export const MInputText : FC<IInputText> = (props) => {
@@ -14,7 +15,8 @@ export const MInputText : FC<IInputText> = (props) => {
         id,
         className,
         type,
-        inputMode
+        inputMode,
+        keyfilter
     } = props;
     
     const classes : string = classNames(className, 'w-full', {
@@ -34,6 +36,7 @@ export const MInputText : FC<IInputText> = (props) => {
                     onBlur={field.onBlur}
                     type={type}
                     inputMode={inputMode}
+                    keyfilter={keyfilter}
                 />
             )}
         />
@@ -45,4 +48,5 @@ export type InputMode = "none" | "text" | "tel" | "url" | "email" | "numeric" | 
 interface IInputText extends IInputBase {
     type?: HTMLInputTypeAttribute;
     inputMode?: InputMode;
+    keyfilter?: KeyFilterType;
 }

@@ -3,7 +3,7 @@ import { Navigate, createBrowserRouter, redirect } from "react-router-dom";
 
 // Local Libraries
 import { AuthLayout } from "@layout";
-import { ConfirmationPage, LoginPage, RegisterPage, ResetPasswordPage, ResetPasswordSentPage } from "@pages";
+import { ConfirmationPage, LoginPage, NewPasswordPage, RegisterPage, ResetPasswordPage, ResetPasswordSentPage } from "@pages";
 
 
 export const authRouter = createBrowserRouter([
@@ -36,6 +36,10 @@ export const authRouter = createBrowserRouter([
                 path: 'confirmation',
                 element: <ConfirmationPage />,
             },
+            {
+                path: 'new-password',
+                element: <NewPasswordPage />,
+            }
         ],
     },
 ]);

@@ -46,10 +46,22 @@
             
         },
         "confirmation": {
-            "title": "Confirma tu cuenta"
+            "title": "Confirma tu cuenta",
+            "message_1": "Hemos enviado un link de confirmación al siguiente correo:",
+            "message_2": "Por favor revisa tu bandeja de entrada y confirma tu cuenta",
+            "message_3": "Si no has recibido el correo, haz click en el siguiente botón para reenviar el correo",
+            "submit": "Reenviar correo"
         },
         "reset": {
-            "title": "Restablece tu contraseña"
+            "title": "Restablece tu contraseña",
+            "email": {
+                "label": "Correo",
+                "required": "Ingresa tu correo",
+                "invalid": "Correo inválido"
+            },
+            "submit": "Restablecer contraseña",
+            "login": "¿Ya recordaste tu contraseña?",
+            "message": "Te enviaremos un correo con las instrucciones para restablecer tu contraseña"
         }
     }
 }

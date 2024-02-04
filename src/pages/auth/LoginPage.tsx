@@ -51,15 +51,16 @@ export const LoginPage = () => {
                 label={message('auth.login.email.label')}
                 name="email"
                 inputMode="email"
-                wrapperClassName="w-8 flex-none"
+                keyfilter="email"
+                wrapperClassName="w-8"
             />
             <MPassword 
                 form={form}
                 label={message('auth.login.password.label')}
                 name="password"
-                wrapperClassName="w-8 flex-none"
+                wrapperClassName="w-8"
             />
-            <div className="w-8 flex justify-content-between align-items-center flex-none">
+            <div className="w-8 flex justify-content-between align-items-center">
                 <MInputSwitch
                     noError 
                     form={form}
@@ -76,15 +77,15 @@ export const LoginPage = () => {
             <SubmitButton 
                 rounded
                 label={message('auth.login.submit')}
-                className="w-8 bg-white text-primary flex-none"
+                className="w-8 bg-white text-primary"
             />
             <span
-                className="text-sm flex-none"
+                className="text-sm"
             >
                 {message('auth.login.other')}
             </span>
             <div
-                className="w-8 flex justify-content-center gap-2 flex-none"
+                className="w-8 flex justify-content-center gap-2"
             >
                 <GoogleButton />
             </div>

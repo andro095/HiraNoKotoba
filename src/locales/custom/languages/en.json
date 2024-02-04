@@ -45,10 +45,22 @@
             "login": "Already have an account?"
         },
         "confirmation": {
-            "title": "Confirm your email"
+            "title": "Confirm your email",
+            "message_1": "We have sent a confirmation link to the next email:",
+            "message_2": "Please check your email and click on the link to confirm your account.",
+            "message_3": "If you have not received the email, click on the button to resend the confirmation email.",
+            "submit": "Resend email"
         },
         "reset": {
-            "title": "Reset your password"
+            "title": "Reset your password",
+            "email": {
+                "label": "Email",
+                "required": "Email is required",
+                "invalid": "Email is invalid"
+            },
+            "submit": "Send email",
+            "login": "Remembered your password?",
+            "message": "To reset your password, enter the email with which you registered and we will send you an email with the instructions."
         }
     }
 }
