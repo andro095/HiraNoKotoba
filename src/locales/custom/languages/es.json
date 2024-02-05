@@ -62,6 +62,32 @@
             "submit": "Restablecer contraseña",
             "login": "¿Ya recordaste tu contraseña?",
             "message": "Te enviaremos un correo con las instrucciones para restablecer tu contraseña"
+        },
+        "resetSent": {
+            "title": "Correo enviado",
+            "message_1": "Hemos enviado un correo con las instrucciones para restablecer tu contraseña a la siguiente dirección:",
+            "message_2": "Por favor revisa tu bandeja de entrada y sigue las instrucciones",
+            "message_3": "Si no has recibido el correo, haz click en el siguiente botón para reenviar el correo",
+            "submit": "Reenviar correo"
+        },
+        "newPassword": {
+            "title": "Nueva contraseña",
+            "password": {
+                "label": "Contraseña",
+                "required": "Ingresa tu contraseña"
+            },
+            "confirmPasword": {
+                "label": "Confirma tu contraseña",
+                "required": "Confirma tu contraseña",
+                "invalid": "Las contraseñas no coinciden"
+            },
+            "submit": "Guardar contraseña",
+            "message": "Ingresa tu nueva contraseña"
+        },
+        "reseted": {
+            "title": "Contraseña restablecida",
+            "message": "Tu contraseña ha sido restablecida exitosamente. Ahora puedes iniciar sesión con tu nueva contraseña",
+            "submit": "Iniciar sesión"
         }
     }
 }

@@ -1,10 +1,13 @@
-import { message } from "@components"
+import { message } from "@components";
 import { useBreakpoints, useMessagge } from "@hooks";
 import { Button } from "primereact/button";
+import { useNavigate } from "react-router-dom";
 
-export const ResetPasswordSentPage = () => {
+
+export const ResettedPage = () => {
 
     const { getMessage } = useMessagge();
+    const navigate = useNavigate();
     const { isMobile, isDesktop } = useBreakpoints();
 
     const size = isDesktop ? 'large' : isMobile ? 'small' : undefined;
@@ -16,19 +19,14 @@ export const ResetPasswordSentPage = () => {
             <p
                 className="w-8 m-0 text-center"
             >
-                {message('auth.reset-sent.message_1')}
-            </p>
-            <p
-                className="w-8 m-0 text-center"
-            >
-                {message('auth.reset-sent.message_2')}
+                {message('auth.resetted.message')}
             </p>
             <Button
                 rounded
-                label={getMessage('auth.reset-sent.submit')}
+                label={getMessage('auth.resetted.submit')}
                 className="w-8 bg-white text-primary"
                 size={size}
-                onClick={() => {}}
+                onClick={() => navigate('/auth/login')}
             />
         </div>
     )

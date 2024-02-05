@@ -17,3 +17,9 @@ export interface IRegisterForm {
 export interface IResetPasswordForm {
     email: string;
 }
+
+export interface INewPasswordForm {
+    password: string;
+    confirmPassword: string;
+    resetPasswordToken: string;
+}

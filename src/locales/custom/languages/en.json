@@ -61,6 +61,31 @@
             "submit": "Send email",
             "login": "Remembered your password?",
             "message": "To reset your password, enter the email with which you registered and we will send you an email with the instructions."
+        },
+        "reset-sent": {
+            "title": "Email sent",
+            "message_1": "Please check your email and follow the instructions to reset your password.",
+            "message_2": "If you have not received the email, click on the button to resend the email.",
+            "submit": "Resend email"
+        },
+        "new-password": {
+            "title": "New password",
+            "password": {
+                "label": "Password",
+                "required": "Password is required"
+            },
+            "confirmPassword": {
+                "label": "Confirm password",
+                "required": "Confirm your password is required",
+                "invalid": "Passwords do not match"
+            },
+            "submit": "Change password",
+            "message": "Enter your new password and confirm it to change your password."
+        },
+        "resetted": {
+            "title": "Password changed",
+            "message": "Your password has been changed successfully. Now you can login with your new password.",
+            "submit": "Go to login"
         }
     }
 }
