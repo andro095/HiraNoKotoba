@@ -24,13 +24,13 @@ export const RegisterPage = () => {
     const schema = useMemo(() => {
         return yup.object({
             email: yup.string()
-                    .email(getMessage('auth.register.email.invalid'))
-                    .required(getMessage('auth.register.email.required')),
+                    .email(getMessage('auth.email.invalid'))
+                    .required(getMessage('auth.email.required')),
             password: yup.string()
-                    .required(getMessage('auth.register.password.required')),
+                    .required(getMessage('auth.password.required')),
             confirmPassword: yup.string()
-                    .required(getMessage('auth.register.confirmPassword.required'))
-                    .oneOf([yup.ref('password')], getMessage('auth.register.confirmPassword.invalid')),
+                    .required(getMessage('auth.confirmPassword.required'))
+                    .oneOf([yup.ref('password')], getMessage('auth.confirmPassword.invalid')),
             name: yup.string()
                     .required(getMessage('auth.register.name.required')),
             lastName: yup.string()
@@ -56,7 +56,7 @@ export const RegisterPage = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full flex-grow-1 flex flex-column gap-3 align-items-center"
+            className="w-full flex-grow-1 flex flex-column gap-4 align-items-center"
         >
             <MInputText 
                 form={form}
@@ -74,7 +74,7 @@ export const RegisterPage = () => {
             />
             <MInputText 
                 form={form}
-                label={message('auth.register.email.label')}
+                label={message('auth.email.label')}
                 name="email"
                 inputMode="email"
                 keyfilter="email"
@@ -83,13 +83,13 @@ export const RegisterPage = () => {
             <MPassword
                 feedback
                 form={form}
-                label={message('auth.register.password.label')}
+                label={message('auth.password.label')}
                 name="password"
                 wrapperClassName="w-8"
             />
             <MPassword 
                 form={form}
-                label={message('auth.register.confirmPassword.label')}
+                label={message('auth.confirmPassword.label')}
                 name="confirmPassword"
                 wrapperClassName="w-8"
             />

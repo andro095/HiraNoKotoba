@@ -20,8 +20,8 @@ export const ResetPasswordPage = () => {
     const schema = useMemo(() => {
         return yup.object({
             email: yup.string()
-                    .email(getMessage('auth.reset.email.invalid'))
-                    .required(getMessage('auth.reset.email.required'))
+                    .email(getMessage('auth.email.invalid'))
+                    .required(getMessage('auth.email.required'))
         }).required();
     }, []);
 
@@ -43,7 +43,7 @@ export const ResetPasswordPage = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full flex-grow-1 flex flex-column gap-3 align-items-center"
+            className="w-full flex-grow-1 flex flex-column gap-4 align-items-center"
         >
             <p
                 className="w-8 m-0 text-center"
@@ -52,7 +52,7 @@ export const ResetPasswordPage = () => {
             </p>
             <MInputText 
                 form={form}
-                label={message('auth.reset.email.label')}
+                label={message('auth.email.label')}
                 name="email"
                 inputMode="email"
                 keyfilter="email"

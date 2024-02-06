@@ -21,10 +21,10 @@ export const NewPasswordPage = () => {
     const schema = useMemo(() => {
         return yup.object({
             password: yup.string()
-                .required(getMessage('auth.new-password.password.required')),
+                .required(getMessage('auth.password.required')),
             confirmPassword: yup.string()
-                .oneOf([yup.ref('password')], getMessage('auth.new-password.confirmPassword.invalid'))
-                .required(getMessage('auth.new-password.confirmPassword.required')),
+                .oneOf([yup.ref('password')], getMessage('auth.confirmPassword.invalid'))
+                .required(getMessage('auth.confirmPassword.required')),
             resetPasswordToken: yup.string().default('')
         }).required();
     },[]);
@@ -47,7 +47,7 @@ export const NewPasswordPage = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full flex-grow-1 flex flex-column gap-3 align-items-center"
+            className="w-full flex-grow-1 flex flex-column gap-4 align-items-center"
         >
             <p
                 className="w-8 m-0 text-center"
@@ -57,13 +57,13 @@ export const NewPasswordPage = () => {
             <MPassword 
                 feedback
                 form={form}
-                label={message('auth.new-password.password.label')}
+                label={message('auth.password.label')}
                 name="password"
                 wrapperClassName="w-8"
             />
             <MPassword
                 form={form}
-                label={message('auth.new-password.confirmPassword.label')}
+                label={message('auth.confirmPassword.label')}
                 name="confirmPassword"
                 wrapperClassName="w-8"
             />

@@ -11,7 +11,7 @@ export const ResetPasswordSentPage = () => {
 
     return (
         <div
-            className="w-full flex-grow-1 flex flex-column gap-3 align-items-center"
+            className="w-full flex-grow-1 flex flex-column gap-4 align-items-center"
         >
             <p
                 className="w-8 m-0 text-center"

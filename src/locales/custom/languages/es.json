@@ -1,38 +1,29 @@
 {
     "auth": {
+        "email": {
+            "label": "Correo",
+            "required": "Ingresa tu correo",
+            "invalid": "Correo inválido"
+        },
+        "password": {
+            "label": "Contraseña",
+            "required": "Ingresa tu contraseña"
+        },
         "login": {
             "title": "Bienvenido",
-            "email": {
-                "label": "Correo",
-                "required": "Ingresa tu correo",
-                "invalid": "Correo inválido"
-            },
-            "password": {
-                "label": "Contraseña",
-                "required": "Ingresa tu contraseña"
-            },
             "remember": "Recuérdame",
             "submit": "Iniciar sesión",
             "forgot": "¿Olvidaste tu contraseña?",
             "other": "o inicia sesión con",
             "register": "¿No tienes cuenta?"
         },
+        "confirmPasword": {
+            "label": "Confirma tu contraseña",
+            "required": "Confirma tu contraseña",
+            "invalid": "Las contraseñas no coinciden"
+        },
         "register": {
             "title": "Unete",
-            "email": {
-                "label": "Correo",
-                "required": "Ingresa tu correo",
-                "invalid": "Correo inválido"
-            },
-            "password": {
-                "label": "Contraseña",
-                "required": "Ingresa tu contraseña"
-            },
-            "confirmPasword": {
-                "label": "Confirma tu contraseña",
-                "required": "Confirma tu contraseña",
-                "invalid": "Las contraseñas no coinciden"
-            },
             "name": {
                 "label": "Nombre",
                 "required": "Ingresa tu nombre"
@@ -54,11 +45,6 @@
         },
         "reset": {
             "title": "Restablece tu contraseña",
-            "email": {
-                "label": "Correo",
-                "required": "Ingresa tu correo",
-                "invalid": "Correo inválido"
-            },
             "submit": "Restablecer contraseña",
             "login": "¿Ya recordaste tu contraseña?",
             "message": "Te enviaremos un correo con las instrucciones para restablecer tu contraseña"
@@ -72,15 +58,6 @@
         },
         "newPassword": {
             "title": "Nueva contraseña",
-            "password": {
-                "label": "Contraseña",
-                "required": "Ingresa tu contraseña"
-            },
-            "confirmPasword": {
-                "label": "Confirma tu contraseña",
-                "required": "Confirma tu contraseña",
-                "invalid": "Las contraseñas no coinciden"
-            },
             "submit": "Guardar contraseña",
             "message": "Ingresa tu nueva contraseña"
         },

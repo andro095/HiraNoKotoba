@@ -20,10 +20,10 @@ export const LoginPage = () => {
     const schema = useMemo(() => {
         return yup.object({
             email: yup.string()
-                    .email(getMessage('auth.login.email.invalid'))
-                    .required(getMessage('auth.login.email.required')),
+                    .email(getMessage('auth.email.invalid'))
+                    .required(getMessage('auth.email.required')),
             password: yup.string()
-                    .required(getMessage('auth.login.password.required')),
+                    .required(getMessage('auth.password.required')),
             rememberMe: yup.boolean().default(false)
         }).required();
     }, []);
@@ -44,11 +44,11 @@ export const LoginPage = () => {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            className="w-full flex-grow-1 flex flex-column gap-3 align-items-center"
+            className="w-full flex-grow-1 flex flex-column gap-4 align-items-center"
         >
             <MInputText 
                 form={form}
-                label={message('auth.login.email.label')}
+                label={message('auth.email.label')}
                 name="email"
                 inputMode="email"
                 keyfilter="email"
@@ -56,7 +56,7 @@ export const LoginPage = () => {
             />
             <MPassword 
                 form={form}
-                label={message('auth.login.password.label')}
+                label={message('auth.password.label')}
                 name="password"
                 wrapperClassName="w-8"
             />
