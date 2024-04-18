@@ -2,6 +2,7 @@ import { GoogleButton, MInputSwitch, MInputText, MPassword, SubmitButton, messag
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useMessagge } from "@hooks";
 import { ILoginForm } from "@models";
+import { instance } from "@services";
 import { useMemo } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -39,6 +40,8 @@ export const LoginPage = () => {
 
     const onSubmit: SubmitHandler<ILoginForm> = (data) => {
         console.log(data);
+
+        instance.get('')
     }
 
     return (

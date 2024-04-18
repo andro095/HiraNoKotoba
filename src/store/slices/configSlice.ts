@@ -4,10 +4,12 @@ import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 interface ConfigState {
     locale: string;
+    isLoading: boolean;
 }
 
 const initialState : ConfigState = {
     locale: 'en',
+    isLoading: false,
 };
 
 export const configSlice = createSlice({
@@ -17,6 +19,10 @@ export const configSlice = createSlice({
         setLocale: (state, { payload } : PayloadAction<string> ) => {
             state.locale = payload;
         },
+
+        setIsLoading: (state, { payload } : PayloadAction<boolean>) => {
+            state.isLoading = payload;
+        }
     }
 });
-export const { setLocale } = configSlice.actions;
+export const { setLocale, setIsLoading } = configSlice.actions;

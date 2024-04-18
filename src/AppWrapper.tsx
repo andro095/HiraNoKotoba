@@ -9,7 +9,7 @@ import { APIOptions, PrimeReactProvider } from "primereact/api";
 // Local Libraries
 import { useConfigStore } from "@hooks";
 import { locales } from "@locales";
-import { ToastProvider } from "@providers";
+import { LoaderProvider, ToastProvider } from "@providers";
 
 // Local Components
 import { App } from "./App";
@@ -37,9 +37,11 @@ export const AppWrapper = () => {
             <PrimeReactProvider
                 value={primeContextOptions}
             >
-                <ToastProvider>
-                    <App />
-                </ToastProvider>
+                <LoaderProvider>
+                    <ToastProvider>
+                        <App />
+                    </ToastProvider>
+                </LoaderProvider>
             </PrimeReactProvider>
         </IntlProvider>
     )
