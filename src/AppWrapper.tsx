@@ -30,7 +30,7 @@ export const AppWrapper = () => {
 
     return (
         <IntlProvider
-            defaultLocale="en"
+            defaultLocale="ens"
             locale={locale}
             messages={flatten(locales[locale])}
         >
