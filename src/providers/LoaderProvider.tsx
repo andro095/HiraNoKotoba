@@ -7,7 +7,7 @@ import { FC, ReactNode, useEffect } from "react";
 
 export const LoaderProvider : FC<LoaderProviderProps> = ({ children }) => {
 
-    const { updateLoading } = useConfigStore();
+    const { isLoading, updateLoading } = useConfigStore();
 
     useEffect(() => {
         instance.interceptors.request.use(config => {
@@ -28,9 +28,11 @@ export const LoaderProvider : FC<LoaderProviderProps> = ({ children }) => {
         });
     }, []);
 
+    
+
     return (
         <>
-            <Loader />
+            {isLoading && <Loader />}
             {children}
         </>
     )

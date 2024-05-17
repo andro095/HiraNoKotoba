@@ -1,11 +1,19 @@
-import { IInputBase } from "@models"
+// * React Libraries
 import { FC, HTMLInputTypeAttribute } from "react"
-import { MInputBase } from "./MInputBase";
-import { InputText } from "primereact/inputtext";
-import { classNames } from "primereact/utils";
-import { useBreakpoints } from "@hooks";
-import { KeyFilterType } from "primereact/keyfilter";
 
+// * Third Party Libraries
+import { InputText } from "primereact/inputtext";
+import { KeyFilterType } from "primereact/keyfilter";
+import { classNames } from "primereact/utils";
+
+// * Hooks
+import { useBreakpoints } from "@hooks";
+
+// * Models
+import { IInputBase } from "@models"
+
+// * Components
+import { MInputBase } from "./MInputBase";
 
 export const MInputText : FC<IInputText> = (props) => {
 
@@ -27,19 +35,20 @@ export const MInputText : FC<IInputText> = (props) => {
     return (
         <MInputBase
             {...props}
-            render={({ field, fieldState }) => (
-                <InputText
-                    id={id ?? field.name}
-                    value={field.value}
-                    className={`${classes} ${classNames({ 'p-invalid': fieldState.error })}`}
-                    onChange={(e) => field.onChange(e.target.value)}
-                    onBlur={field.onBlur}
-                    type={type}
-                    inputMode={inputMode}
-                    keyfilter={keyfilter}
-                />
-            )}
-        />
+        >
+            {
+                ({ field, fieldState }) => (
+                    <InputText 
+                        {...field}
+                        id={id ?? field.name}
+                        className={`${classes} ${classNames({ 'p-invalid': fieldState.error })}`}
+                        type={type}
+                        inputMode={inputMode}
+                        keyfilter={keyfilter}
+                    />
+                )
+            }
+        </MInputBase>
     )
 }
 

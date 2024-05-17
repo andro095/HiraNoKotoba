@@ -13,11 +13,11 @@ export interface IInputBase {
     wrapperStyle?: CSSProperties;
 }
 
-export interface IRenderComponent {
-    render: (props: IRender) => ReactElement;
+export interface IChildren {
+    children: (props: IControl) => ReactElement;
 }
 
-interface IRender {
+interface IControl {
     field: ControllerRenderProps;
     fieldState: ControllerFieldState;
     formState: UseFormStateReturn<Record<string, unknown>>;

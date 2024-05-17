@@ -1,12 +1,17 @@
-import { IInputBase, IRenderComponent } from "@models";
+// * React Libraries
 import { FC } from "react";
+
+// * Third Party Libraries
 import { Controller } from "react-hook-form"
+import { FloatLabel } from 'primereact/floatlabel';
 
+// * Modelos
+import { IInputBase, IChildren } from "@models";
 
-export const MInputBase : FC<IInputBase & IRenderComponent> = (props) => {
+export const MInputBase : FC<IInputBase & IChildren> = (props) => {
 
     const { 
-        render, 
+        children, 
         form, 
         label, 
         name, 
@@ -31,12 +36,10 @@ export const MInputBase : FC<IInputBase & IRenderComponent> = (props) => {
                 <div
                     className={wrapperClassName}
                 >
-                    <span className="p-float-label">
-                        {
-                            render({ field, fieldState, formState })
-                        }
-                        <label htmlFor={id ?? field.name}>{ label }</label>
-                    </span>
+                    <FloatLabel>
+                            {children({ field, fieldState, formState })}
+                            <label htmlFor={id ?? field.name}>{ label }</label>
+                    </FloatLabel>
                     {getFormErrorMessage()}
                 </div>
             )}

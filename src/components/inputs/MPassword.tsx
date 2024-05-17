@@ -1,10 +1,18 @@
-import { IInputBase } from "@models"
-import { MInputBase } from "./MInputBase"
+// * React Libraries
 import { FC } from "react";
+
+// * Third Party Libraries
 import { Password } from "primereact/password";
 import { classNames } from "primereact/utils";
+
+// * Hooks
 import { useBreakpoints } from "@hooks";
 
+// * Modelos
+import { IInputBase } from "@models";
+
+// * Components
+import { MInputBase } from "./MInputBase";
 
 export const MPassword : FC<IPassword> = (props) => {
 
@@ -24,19 +32,20 @@ export const MPassword : FC<IPassword> = (props) => {
     return (
         <MInputBase 
             {...props}
-            render={({ field, fieldState }) => (
-                <Password
-                    toggleMask
-                    inputId={id ?? field.name}
-                    value={field.value}
-                    inputClassName="w-full"
-                    className={`${classes} ${classNames({ 'p-invalid': fieldState.error })}`}
-                    onChange={(e) => field.onChange(e.target.value)}
-                    onBlur={field.onBlur}
-                    feedback={feedback}
-                />
-            )}
-        />
+        >
+            {
+                ({ field, fieldState }) => (
+                    <Password 
+                        {...field}
+                        toggleMask
+                        inputClassName="w-full"
+                        inputId={id ?? field.name}
+                        className={`${classes} ${classNames({ 'p-invalid': fieldState.error })}`}
+                        feedback={feedback}
+                    />
+                )
+            }   
+        </MInputBase>
     )
 }
 

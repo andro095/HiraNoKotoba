@@ -278,6 +278,17 @@ $dangerButtonActiveBorderColor: scale-color(
 $dangerButtonFocusShadow: 0 0 0 0.1rem
 	scale-color($dangerButtonBg, $lightness: 60%) !default;
 
+$contrastButtonBg:$shade900 !default;
+$contrastButtonTextColor:#ffffff !default;
+$contrastButtonBorder:1px solid $contrastButtonBg !default;
+$contrastButtonHoverBg:$shade800 !default;
+$contrastButtonTextHoverColor:$contrastButtonTextColor !default;
+$contrastButtonHoverBorderColor:$shade800 !default;
+$contrastButtonActiveBg:$shade700 !default;
+$contrastButtonTextActiveColor:$contrastButtonTextColor !default;
+$contrastButtonActiveBorderColor:$shade700 !default;
+$contrastButtonFocusShadow:none !default;
+
 $linkButtonColor: $primaryDarkerColor !default;
 $linkButtonHoverColor: $primaryDarkerColor !default;
 $linkButtonTextHoverDecoration: underline !default;
@@ -848,6 +859,8 @@ $avatarTextColor: $textColor !default;
 $chipBg: $shade300 !default;
 $chipTextColor: $textColor !default;
 $chipBorderRadius: 16px !default;
+$chipFocusBg:$shade400 !default;
+$chipFocusTextColor:$textColor !default;
 
 //scrollTop
 $scrollTopBg: rgba(0, 0, 0, 0.7) !default;

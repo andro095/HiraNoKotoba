@@ -3,9 +3,11 @@
 export const Loader = () => {
     return (
         <div
-            className="absolute w-screen h-screen top-0 left-0 bg-black-alpha-40 z-5"
+            className="loader"
         >
-            
+            <i 
+                className="pi pi-spin pi-spinner loader-spinner"
+            />
         </div>
     )
 }

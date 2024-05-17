@@ -1,12 +1,23 @@
-import { GoogleButton, MInputSwitch, MInputText, MPassword, SubmitButton, message } from "@components";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { useMessagge } from "@hooks";
-import { ILoginForm } from "@models";
-import { instance } from "@services";
+// * React Libraries
 import { useMemo } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import * as yup from 'yup';
+
+// * Third Party Libraries
+import { boolean, object, string } from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+
+// * Hooks
+import { useMessagge } from "@hooks";
+
+// * Services
+import { instance } from "@services";
+
+// * Components
+import { GoogleButton, MInputSwitch, MInputText, MPassword, SubmitButton, message } from "@components";
+
+// * Models
+import { ILoginForm } from "@models";
 
 const initialForm: ILoginForm = {
     email: '',
@@ -19,13 +30,13 @@ export const LoginPage = () => {
     const { getMessage } = useMessagge();
     
     const schema = useMemo(() => {
-        return yup.object({
-            email: yup.string()
+        return object({
+            email: string()
                     .email(getMessage('auth.email.invalid'))
                     .required(getMessage('auth.email.required')),
-            password: yup.string()
+            password: string()
                     .required(getMessage('auth.password.required')),
-            rememberMe: yup.boolean().default(false)
+            rememberMe: boolean().default(false)
         }).required();
     }, []);
 
