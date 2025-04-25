@@ -1,5 +1,8 @@
-import { getEnvVariables } from "@helpers";
+// * Third Party Libraries
 import axios from "axios";
+
+// * Helpers
+import { getEnvVariables } from "@helpers";
 
 
 const { VITE_API_URL } = getEnvVariables();
@@ -15,8 +18,6 @@ export const instance = axios.create({
 
 instance.interceptors.request.use(config => {
     config.headers['x-token'] = localStorage.getItem('token') ?? '';
-
-    
 
     return config;
 });
